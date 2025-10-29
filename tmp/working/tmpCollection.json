@@ -1,0 +1,1945 @@
+{
+    "item": [
+        {
+            "name": "Subscriber Notifications",
+            "description": "API Endpoints for retrieving and management of subscriber notifications feed.",
+            "item": [
+                {
+                    "id": "46e332d0-c496-48bc-8e5f-7e88802e9f8a",
+                    "name": "Endpoint to update notification read status",
+                    "request": {
+                        "name": "Endpoint to update notification read status",
+                        "description": {
+                            "content": "Update notification read status by subscriber id and notification id",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "messages",
+                                "action"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "disabled": true,
+                                "description": {
+                                    "content": "",
+                                    "type": "text/plain"
+                                },
+                                "key": "Accept-Language",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "disabled": false,
+                                "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                },
+                                "key": "Brand",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "PUT",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "c487d507-c77b-4661-90dc-aeca21775709",
+                            "name": "Notification status update executed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "action"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"id\": \"incididunt ad aliqua nostrud in\",\n  \"isViewed\": true,\n  \"isSeen\": true,\n  \"isRead\": false,\n  \"createdAt\": \"2017-06-10T16:37:54.299Z\",\n  \"delivery\": {\n    \"action\": {\n      \"actionId\": \"in\",\n      \"route\": \"dolor\",\n      \"data\": {\n        \"occaecat1\": \"in Duis\",\n        \"elit_0b1\": \"ex dolore sit\",\n        \"qui_de\": \"exercitation consectetur elit enim nostrud\"\n      }\n    },\n    \"message\": {\n      \"heading\": \"esse ut Duis\",\n      \"subtitle\": \"magna non ullamco culpa\",\n      \"content\": \"deserunt in\"\n    }\n  },\n  \"messageCenter\": {\n    \"expirationInDate\": \"sed sit\",\n    \"tag\": \"sint ad\",\n    \"priority\": \"mollit dolor in enim\",\n    \"imageUrl\": \"commodo ea\",\n    \"messageType\": \"reprehende\",\n    \"primaryCallToAction\": \"ex\",\n    \"secondaryCallToAction\": \"incididunt id cillum pariatur\",\n    \"startDate\": \"Lorem sunt velit ut\"\n  }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "c04dc400-0649-4f95-9e61-d5c78f34a507",
+                            "name": "Notification not found",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "action"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "18b934e6-7f51-407d-bf26-a6e5734e7d25",
+                            "name": "Unprocessable Entity",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "action"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                            "code": 422,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "b8728396-cc0d-4c3c-930f-07be794b1139",
+                            "name": "Error while updating notification status",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "action"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "84d85393-9dee-43b6-95a0-38a96865e52f",
+                    "name": "Endpoint to update notification read status",
+                    "request": {
+                        "name": "Endpoint to update notification read status",
+                        "description": {
+                            "content": "Update notification read status by subscriber id and notification id",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "notifications"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "disabled": true,
+                                "description": {
+                                    "content": "",
+                                    "type": "text/plain"
+                                },
+                                "key": "Accept-Language",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "disabled": false,
+                                "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                },
+                                "key": "Brand",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "PUT",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "716c2699-d991-47df-86f6-ba396edbd510",
+                            "name": "Notification status update executed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"id\": \"incididunt ad aliqua nostrud in\",\n  \"isViewed\": true,\n  \"isSeen\": true,\n  \"isRead\": false,\n  \"createdAt\": \"2017-06-10T16:37:54.299Z\",\n  \"delivery\": {\n    \"action\": {\n      \"actionId\": \"in\",\n      \"route\": \"dolor\",\n      \"data\": {\n        \"occaecat1\": \"in Duis\",\n        \"elit_0b1\": \"ex dolore sit\",\n        \"qui_de\": \"exercitation consectetur elit enim nostrud\"\n      }\n    },\n    \"message\": {\n      \"heading\": \"esse ut Duis\",\n      \"subtitle\": \"magna non ullamco culpa\",\n      \"content\": \"deserunt in\"\n    }\n  },\n  \"messageCenter\": {\n    \"expirationInDate\": \"sed sit\",\n    \"tag\": \"sint ad\",\n    \"priority\": \"mollit dolor in enim\",\n    \"imageUrl\": \"commodo ea\",\n    \"messageType\": \"reprehende\",\n    \"primaryCallToAction\": \"ex\",\n    \"secondaryCallToAction\": \"incididunt id cillum pariatur\",\n    \"startDate\": \"Lorem sunt velit ut\"\n  }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "33f49582-a677-4f90-b61b-5fb5a1dd600e",
+                            "name": "Notification not found",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "ec7d462e-1158-4a00-bb1c-52fe27619d83",
+                            "name": "Unprocessable Entity",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                            "code": 422,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "6d75a466-0944-4200-8858-91372954dd82",
+                            "name": "Error while updating notification status",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"messageActionList\": [\n    {\n      \"action\": \"unread\",\n      \"subscriber\": \"exercitation et veniam anim\",\n      \"messageId\": \"in incididunt et nulla\",\n      \"subscriberIdRef\": \"id do dolor magna Excepteur\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "headerFamily": "json",
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"commodo dolore irure\",\n    \"message\": \"dolor aliqua velit ex laboris\",\n    \"moreInfo\": \"dolore\",\n    \"userMessage\": \"exercitation rep\",\n    \"validationErrors\": [\n      {\n        \"element\": \"elit laboris fugiat mollit\",\n        \"error\": \"sunt aute dolor mollit\",\n        \"invalidValue\": \"cillum et in culpa\"\n      },\n      {\n        \"element\": \"sunt magna adipisicing laboris\",\n        \"error\": \"elit occaecat\",\n        \"invalidValue\": \"sed non reprehenderit esse\"\n      }\n    ],\n    \"id\": \"0d59cb49-2a1a-1575-d17a-79884dfc8444\",\n    \"time\": -54437717\n  },\n  \"payload\": [\n    {\n      \"id\": \"dolor eiusmod\",\n      \"isViewed\": true,\n      \"isSeen\": false,\n      \"isRead\": true,\n      \"createdAt\": \"1979-08-27T05:05:47.855Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"Lorem enim sint\",\n          \"route\": \"aute\",\n          \"data\": {\n            \"laboris69\": \"proident irure velit\",\n            \"quis_1b\": \"nulla co\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"in qui esse ea in\",\n          \"subtitle\": \"dolor labore\",\n          \"content\": \"Duis irure\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"Excepteur fugiat\",\n        \"tag\": \"in ipsum nisi reprehenderit adipisicing\",\n        \"priority\": \"quis\",\n        \"imageUrl\": \"non aliqua officia\",\n        \"messageType\": \"non Lorem\",\n        \"primaryCallToAction\": \"tempor quis\",\n        \"secondaryCallToAction\": \"pariatur anim\",\n        \"startDate\": \"irure eiusmod \"\n      }\n    },\n    {\n      \"id\": \"nostrud reprehenderit incididunt est ipsum\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": false,\n      \"createdAt\": \"1947-10-14T15:48:12.771Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"ullamco eiusmod\",\n          \"route\": \"anim sed id ex\",\n          \"data\": {\n            \"dolorfc2\": \"nisi ullamco\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"est qui ut Excepteur consequat\",\n          \"subtitle\": \"sint id\",\n          \"content\": \"est amet do\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"in\",\n        \"tag\": \"anim Duis fugiat\",\n        \"priority\": \"velit adipisicing elit deserunt\",\n        \"imageUrl\": \"sint et\",\n        \"messageType\": \"ex dolor irure tempor\",\n        \"primaryCallToAction\": \"qui aute laboris\",\n        \"secondaryCallToAction\": \"sit aliqua incididunt\",\n        \"startDate\": \"cupidatat cillum\"\n      }\n    }\n  ],\n  \"status\": -72994631,\n  \"warnings\": [\n    {\n      \"message\": \"labore exercitat\",\n      \"moreInfo\": \"tempor magna irure\",\n      \"warningCode\": \"in cillum elit\",\n      \"id\": \"urn:uuid:e420cc1f-89c2-98e9-6873-4f89d0576900\",\n      \"time\": -19773919\n    },\n    {\n      \"message\": \"magna dolore dolor mollit\",\n      \"moreInfo\": \"anim laborum Excepteur sunt\",\n      \"warningCode\": \"consequa\",\n      \"id\": \"30b70c70-3b68-0243-e371-5c0d8ff9e7b7\",\n      \"time\": -2242675\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "f45c80d5-4d96-4da2-85a2-5ad298d4b221",
+                    "name": "Get the unseen notifications count by subscriber Id",
+                    "request": {
+                        "name": "Get the unseen notifications count by subscriber Id",
+                        "description": {
+                            "content": "Endpoint for getting the unseen notifications count from Novu by subscriber Id.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "notifications",
+                                "subscriber",
+                                ":subscriberId",
+                                "stats"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "type": "any",
+                                    "value": "voluptate tempor proident",
+                                    "key": "subscriberId",
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    }
+                                }
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "9949f1b3-4b09-473c-a4da-e22d8bfe636c",
+                            "name": "Unseen Notifications count retrieved",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId",
+                                        "stats"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"unSeenCount\": -75898513\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "de95b394-cbdc-4bb2-a90a-a5b9659e9c8a",
+                            "name": "Error while getting the unseen notifications count",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId",
+                                        "stats"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"consectetur quis cillum\",\n    \"message\": \"in nostrud\",\n    \"moreInfo\": \"ea sit et\",\n    \"userMessage\": \"qui laboris consequat sed\",\n    \"validationErrors\": [\n      {\n        \"element\": \"Excepteur quis veniam\",\n        \"error\": \"eiusmod\",\n        \"invalidValue\": \"Ut dolor\"\n      },\n      {\n        \"element\": \"veniam esse\",\n        \"error\": \"proident\",\n        \"invalidValue\": \"enim\"\n      }\n    ],\n    \"id\": \"503ac7b0-59e1-2d14-37d9-1c8b4d278342\",\n    \"time\": -22505215\n  },\n  \"payload\": {\n    \"unSeenCount\": 55195524\n  },\n  \"status\": 20671550,\n  \"warnings\": [\n    {\n      \"message\": \"ex elit id cupidatat\",\n      \"moreInfo\": \"in dolore nulla veniam\",\n      \"warningCode\": \"et reprehenderit\",\n      \"id\": \"48815d18-23af-0d34-d5c9-0876bf62503d\",\n      \"time\": 84440966\n    },\n    {\n      \"message\": \"consectetur incididunt laborum exercitation\",\n      \"moreInfo\": \"officia proident labore\",\n      \"warningCode\": \"ipsum dolore qui ex ut\",\n      \"id\": \"ae906496-1a8c-2efc-3d54-5c96ba0a6764\",\n      \"time\": -65080431\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "acb9a85d-323a-48a6-919b-3daef1e07fef",
+                    "name": "Get the unseen notifications count by subscriber Id",
+                    "request": {
+                        "name": "Get the unseen notifications count by subscriber Id",
+                        "description": {
+                            "content": "Endpoint for getting the unseen notifications count from Novu by subscriber Id.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "messages",
+                                "subscriber",
+                                ":subscriberId",
+                                "stats"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "type": "any",
+                                    "value": "voluptate tempor proident",
+                                    "key": "subscriberId",
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    }
+                                }
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "57b51348-ab75-4a8f-afc2-2f16f3235faf",
+                            "name": "Unseen Notifications count retrieved",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId",
+                                        "stats"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"unSeenCount\": -75898513\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "3ed3f425-10c8-4b93-971f-2b078468eba2",
+                            "name": "Error while getting the unseen notifications count",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId",
+                                        "stats"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"consectetur quis cillum\",\n    \"message\": \"in nostrud\",\n    \"moreInfo\": \"ea sit et\",\n    \"userMessage\": \"qui laboris consequat sed\",\n    \"validationErrors\": [\n      {\n        \"element\": \"Excepteur quis veniam\",\n        \"error\": \"eiusmod\",\n        \"invalidValue\": \"Ut dolor\"\n      },\n      {\n        \"element\": \"veniam esse\",\n        \"error\": \"proident\",\n        \"invalidValue\": \"enim\"\n      }\n    ],\n    \"id\": \"503ac7b0-59e1-2d14-37d9-1c8b4d278342\",\n    \"time\": -22505215\n  },\n  \"payload\": {\n    \"unSeenCount\": 55195524\n  },\n  \"status\": 20671550,\n  \"warnings\": [\n    {\n      \"message\": \"ex elit id cupidatat\",\n      \"moreInfo\": \"in dolore nulla veniam\",\n      \"warningCode\": \"et reprehenderit\",\n      \"id\": \"48815d18-23af-0d34-d5c9-0876bf62503d\",\n      \"time\": 84440966\n    },\n    {\n      \"message\": \"consectetur incididunt laborum exercitation\",\n      \"moreInfo\": \"officia proident labore\",\n      \"warningCode\": \"ipsum dolore qui ex ut\",\n      \"id\": \"ae906496-1a8c-2efc-3d54-5c96ba0a6764\",\n      \"time\": -65080431\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "a2655f14-de7a-4ad6-a8d2-cfeb59bedd22",
+                    "name": "Endpoint for performing notifications search",
+                    "request": {
+                        "name": "Endpoint for performing notifications search",
+                        "description": {
+                            "content": "Fetches notifications from Novu by subscriberId.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "notifications",
+                                "subscriber",
+                                ":subscriberId"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "type": "any",
+                                    "value": "voluptate tempor proident",
+                                    "key": "subscriberId",
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    }
+                                }
+                            ]
+                        },
+                        "header": [
+                            {
+                                "disabled": true,
+                                "description": {
+                                    "content": "",
+                                    "type": "text/plain"
+                                },
+                                "key": "Accept-Language",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "disabled": false,
+                                "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                },
+                                "key": "Brand",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "41a51d40-6ce5-4fa9-9e3c-85811b3c9697",
+                            "name": "Notifications search executed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"notifications\": [\n    {\n      \"id\": \"proident eu dolor\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": true,\n      \"createdAt\": \"1950-03-09T19:00:09.787Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"labore dolor velit ad pariatur\",\n          \"route\": \"id cupidatat ut\",\n          \"data\": {\n            \"reprehenderitb\": \"occaecat exercitation\",\n            \"nisi_83\": \"adipisicing dolo\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"veniam\",\n          \"subtitle\": \"reprehenderit Lorem non\",\n          \"content\": \"ut incididunt\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"mollit enim\",\n        \"tag\": \"dolore velit d\",\n        \"priority\": \"deserunt exercitation\",\n        \"imageUrl\": \"aute et qui occaecat\",\n        \"messageType\": \"aliquip in officia\",\n        \"primaryCallToAction\": \"officia veniam\",\n        \"secondaryCallToAction\": \"proident\",\n        \"startDate\": \"sed dolore eu\"\n      }\n    },\n    {\n      \"id\": \"dolor magna\",\n      \"isViewed\": true,\n      \"isSeen\": true,\n      \"isRead\": true,\n      \"createdAt\": \"2007-06-05T17:04:57.092Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"qui\",\n          \"route\": \"Duis ipsum sint\",\n          \"data\": {\n            \"reprehenderit_670\": \"elit\",\n            \"consectetur_54\": \"dolore pariatur\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"Ut Lorem in ea\",\n          \"subtitle\": \"minim dolore cillum\",\n          \"content\": \"mollit tempor sed nisi\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"aliqua ex\",\n        \"tag\": \"dolor Lorem adipisicing consectetur\",\n        \"priority\": \"tempor nostrud\",\n        \"imageUrl\": \"dolor\",\n        \"messageType\": \"officia qui nulla adipisicing esse\",\n        \"primaryCallToAction\": \"laboris sint ipsum sed\",\n        \"secondaryCallToAction\": \"elit\",\n        \"startDate\": \"mollit enim\"\n      }\n    }\n  ],\n  \"totalCount\": -27109504,\n  \"totalUnseen\": -55204274\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "6f1b7fb3-6593-4efb-b25e-7d68dcebd667",
+                            "name": "Validation error with the subscriber Id",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                            "code": 422,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "6880c0f5-5d10-4ec5-bf84-c352ea016dd3",
+                            "name": "Error while getting subscriber notifications",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "7a426c7c-6c3d-4ea4-89b0-20392b393bd8",
+                            "name": "The request cannot be processed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "notifications",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "95a905db-1c9c-4a65-9664-0d09eab631ec",
+                    "name": "Endpoint for performing notifications search",
+                    "request": {
+                        "name": "Endpoint for performing notifications search",
+                        "description": {
+                            "content": "Fetches notifications from Novu by subscriberId.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "messages",
+                                "subscriber",
+                                ":subscriberId"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "type": "any",
+                                    "value": "voluptate tempor proident",
+                                    "key": "subscriberId",
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "(Required) ",
+                                        "type": "text/plain"
+                                    }
+                                }
+                            ]
+                        },
+                        "header": [
+                            {
+                                "disabled": true,
+                                "description": {
+                                    "content": "",
+                                    "type": "text/plain"
+                                },
+                                "key": "Accept-Language",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "disabled": false,
+                                "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                },
+                                "key": "Brand",
+                                "value": "voluptate tempor proident"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "66061101-0fd0-4e0a-b5a2-b7227fc26d85",
+                            "name": "Notifications search executed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"notifications\": [\n    {\n      \"id\": \"proident eu dolor\",\n      \"isViewed\": false,\n      \"isSeen\": true,\n      \"isRead\": true,\n      \"createdAt\": \"1950-03-09T19:00:09.787Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"labore dolor velit ad pariatur\",\n          \"route\": \"id cupidatat ut\",\n          \"data\": {\n            \"reprehenderitb\": \"occaecat exercitation\",\n            \"nisi_83\": \"adipisicing dolo\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"veniam\",\n          \"subtitle\": \"reprehenderit Lorem non\",\n          \"content\": \"ut incididunt\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"mollit enim\",\n        \"tag\": \"dolore velit d\",\n        \"priority\": \"deserunt exercitation\",\n        \"imageUrl\": \"aute et qui occaecat\",\n        \"messageType\": \"aliquip in officia\",\n        \"primaryCallToAction\": \"officia veniam\",\n        \"secondaryCallToAction\": \"proident\",\n        \"startDate\": \"sed dolore eu\"\n      }\n    },\n    {\n      \"id\": \"dolor magna\",\n      \"isViewed\": true,\n      \"isSeen\": true,\n      \"isRead\": true,\n      \"createdAt\": \"2007-06-05T17:04:57.092Z\",\n      \"delivery\": {\n        \"action\": {\n          \"actionId\": \"qui\",\n          \"route\": \"Duis ipsum sint\",\n          \"data\": {\n            \"reprehenderit_670\": \"elit\",\n            \"consectetur_54\": \"dolore pariatur\"\n          }\n        },\n        \"message\": {\n          \"heading\": \"Ut Lorem in ea\",\n          \"subtitle\": \"minim dolore cillum\",\n          \"content\": \"mollit tempor sed nisi\"\n        }\n      },\n      \"messageCenter\": {\n        \"expirationInDate\": \"aliqua ex\",\n        \"tag\": \"dolor Lorem adipisicing consectetur\",\n        \"priority\": \"tempor nostrud\",\n        \"imageUrl\": \"dolor\",\n        \"messageType\": \"officia qui nulla adipisicing esse\",\n        \"primaryCallToAction\": \"laboris sint ipsum sed\",\n        \"secondaryCallToAction\": \"elit\",\n        \"startDate\": \"mollit enim\"\n      }\n    }\n  ],\n  \"totalCount\": -27109504,\n  \"totalUnseen\": -55204274\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "1844c506-946c-43ba-82d4-a09f21278c1e",
+                            "name": "Validation error with the subscriber Id",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                            "code": 422,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "c3f1d8b8-c462-4ebd-ae93-d3d2417a590e",
+                            "name": "Error while getting subscriber notifications",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "fc2f4460-57b7-42f1-9f1a-259f35240550",
+                            "name": "The request cannot be processed",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "messages",
+                                        "subscriber",
+                                        ":subscriberId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "disabled": true,
+                                        "description": {
+                                            "content": "",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Accept-Language",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "disabled": false,
+                                        "description": {
+                                            "content": "(Required) ",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Brand",
+                                        "value": "voluptate tempor proident"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "{\n  \"error\": {\n    \"errorCode\": \"ex\",\n    \"message\": \"in minim sed\",\n    \"moreInfo\": \"anim\",\n    \"userMessage\": \"cupidatat ipsum\",\n    \"validationErrors\": [\n      {\n        \"element\": \"sunt incididunt aute cillum\",\n        \"error\": \"dolore ipsum proident\",\n        \"invalidValue\": \"proident consectetur\"\n      },\n      {\n        \"element\": \"aliquip cillum voluptate\",\n        \"error\": \"eiusmod Excepteur dolor deserunt\",\n        \"invalidValue\": \"ut \"\n      }\n    ],\n    \"id\": \"0d0c5d5d-f4fd-5444-2f8f-06d2ab23b56d\",\n    \"time\": -85861340\n  },\n  \"payload\": {\n    \"notifications\": [\n      {\n        \"id\": \"quis ut ullamco in\",\n        \"isViewed\": true,\n        \"isSeen\": false,\n        \"isRead\": false,\n        \"createdAt\": \"2004-10-11T10:17:49.041Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"dolore labore velit\",\n            \"route\": \"nisi eiusmod dolor qui\",\n            \"data\": {\n              \"aliquip_ac\": \"labore eiusmod\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"consectetur velit esse\",\n            \"subtitle\": \"eu id consequat Duis\",\n            \"content\": \"non velit aliqua pariatur in\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"commodo\",\n          \"tag\": \"Excepteur ad\",\n          \"priority\": \"non Lorem\",\n          \"imageUrl\": \"exercitation aliqua\",\n          \"messageType\": \"aliqua\",\n          \"primaryCallToAction\": \"ullamco amet id\",\n          \"secondaryCallToAction\": \"sit\",\n          \"startDate\": \"anim mollit minim in enim\"\n        }\n      },\n      {\n        \"id\": \"culpa i\",\n        \"isViewed\": true,\n        \"isSeen\": true,\n        \"isRead\": false,\n        \"createdAt\": \"1968-10-29T18:03:00.087Z\",\n        \"delivery\": {\n          \"action\": {\n            \"actionId\": \"adipisicing est culpa proident\",\n            \"route\": \"aliqua commodo mollit ad\",\n            \"data\": {\n              \"minimf\": \"eu reprehenderit\",\n              \"in_54\": \"Ut adipisicing\"\n            }\n          },\n          \"message\": {\n            \"heading\": \"sint cillum id eiusmod officia\",\n            \"subtitle\": \"ea dolor consequat Duis\",\n            \"content\": \"commodo et\"\n          }\n        },\n        \"messageCenter\": {\n          \"expirationInDate\": \"qui nostrud ut\",\n          \"tag\": \"proident eiusmod aliquip sit et\",\n          \"priority\": \"consectetur veniam culpa occaecat\",\n          \"imageUrl\": \"ex reprehenderit\",\n          \"messageType\": \"aliquip incididunt sint anim\",\n          \"primaryCallToAction\": \"enim minim voluptate\",\n          \"secondaryCallToAction\": \"minim quis voluptate\",\n          \"startDate\": \"dolore minim consectetur commodo\"\n        }\n      }\n    ],\n    \"totalCount\": 72127730,\n    \"totalUnseen\": -15641166\n  },\n  \"status\": -39764865,\n  \"warnings\": [\n    {\n      \"message\": \"sit occaecat qui nostrud veniam\",\n      \"moreInfo\": \"mollit ipsum anim in deserunt\",\n      \"warningCode\": \"nisi sunt\",\n      \"id\": \"urn:uuid:6e5de34c-4d33-a2a2-e32e-7ab5c510a4b6\",\n      \"time\": -94585113\n    },\n    {\n      \"message\": \"id\",\n      \"moreInfo\": \"ex in Ut\",\n      \"warningCode\": \"ipsum sint fugiat sed occaecat\",\n      \"id\": \"urn:uuid:e864a4a9-5134-6749-6de9-197313013c1c\",\n      \"time\": 10725705\n    }\n  ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Actuator",
+            "description": "Monitor and interact",
+            "item": [
+                {
+                    "id": "589ffb11-3b87-43a6-9f18-e48c62efa010",
+                    "name": "Actuator root web endpoint",
+                    "request": {
+                        "name": "Actuator root web endpoint",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "actuator"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/vnd.spring-boot.actuator.v3+json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "e282cca3-fec3-4fa8-b835-65ac635068e1",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "actuator"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.spring-boot.actuator.v3+json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n  \"mollite\": {\n    \"velit_60\": {\n      \"href\": \"incididunt Lorem enim minim ut\",\n      \"templated\": true\n    },\n    \"ipsum57\": {\n      \"href\": \"est Duis do\",\n      \"templated\": false\n    }\n  },\n  \"et0f\": {\n    \"mollit_b67\": {\n      \"href\": \"veniam ipsum\",\n      \"templated\": true\n    },\n    \"et_c_\": {\n      \"href\": \"mollit esse nisi\",\n      \"templated\": true\n    }\n  }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "7de9c0a6-08cf-4eee-bc38-03153d06330b",
+                    "name": "Actuator web endpoint 'health'",
+                    "request": {
+                        "name": "Actuator web endpoint 'health'",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "actuator",
+                                "health"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/vnd.spring-boot.actuator.v3+json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "763a4b2b-dd14-47be-a202-eb5cf3195e51",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "actuator",
+                                        "health"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/vnd.spring-boot.actuator.v3+json"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "heart-beat-controller",
+            "description": "",
+            "item": [
+                {
+                    "id": "7a6eb118-66e4-47fa-b38d-48e262dfa6bc",
+                    "name": "get Heartbeat",
+                    "request": {
+                        "name": "get Heartbeat",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "heartbeat",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "*/*"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "580f77a2-6160-4bb1-b68c-a4d3dcac5c03",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "heartbeat",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "voluptate tempor proident",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "31610289-8ba0-46b4-bb28-1d2566e94443",
+                    "name": "get Heartbeat 1",
+                    "request": {
+                        "name": "get Heartbeat 1",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "heartbeat",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "*/*"
+                            }
+                        ],
+                        "method": "HEAD",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "35ab80c1-9e4c-4e27-bce1-9ea0eba38bdb",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "heartbeat",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "HEAD",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "voluptate tempor proident",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "6b63d870-7eec-485c-a43f-de8f2eec1dc1",
+                    "name": "get Heartbeat 2",
+                    "request": {
+                        "name": "get Heartbeat 2",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "heartbeat"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "*/*"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "ee640cea-b29c-462a-a9e8-954fb8a0fb3a",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "heartbeat"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "voluptate tempor proident",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                },
+                {
+                    "id": "970323c2-b1c6-4708-ad01-f6caff3b5780",
+                    "name": "get Heartbeat 3",
+                    "request": {
+                        "name": "get Heartbeat 3",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "heartbeat"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "*/*"
+                            }
+                        ],
+                        "method": "HEAD",
+                        "body": {},
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "a9d554df-1e2b-49b6-b7c7-59bf834ea9ed",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "heartbeat"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "*/*"
+                                    }
+                                ],
+                                "method": "HEAD",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "*/*"
+                                }
+                            ],
+                            "body": "voluptate tempor proident",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
+                }
+            ]
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "https://api.mesh.dkp2.tst.aws-digital.rccl.com/notifications/digital-messaging-center/v1"
+        }
+    ],
+    "info": {
+        "_postman_id": "3f2b6b73-8de6-42d6-976a-fa0ce5eac9ab",
+        "name": "Digital Messaging Center",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "",
+            "type": "text/plain"
+        }
+    }
+}

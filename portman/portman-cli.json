@@ -1,0 +1,8 @@
+{
+  "local": "messaging-center.yml",
+  "output": "collection.postman.json",
+  "portmanConfigFile": "portman/portman-config.json",
+  "includeTests": true,
+  "syncPostman": false,
+  "runNewman": false
+}

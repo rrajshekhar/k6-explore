@@ -1,0 +1,200 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "iteration": 169,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 0},
+      "id": 1,
+      "options": {"reduceOptions": {"calcs": ["mean"], "fields": "", "values": false}},
+      "targets": [
+        {
+          "expr": "sum(rate(k6_http_reqs{job_name=\"$job_name\"}[1m]))",
+          "interval": "",
+          "legendFormat": "Requests/sec",
+          "refId": "A"
+        }
+      ],
+      "title": "Requests per Second",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 0},
+      "id": 2,
+      "options": {"reduceOptions": {"calcs": ["max"], "fields": "", "values": false}},
+      "targets": [
+        {
+          "expr": "max(k6_vus{job_name=\"$job_name\"})",
+          "interval": "",
+          "legendFormat": "VUs",
+          "refId": "A"
+        }
+      ],
+      "title": "Virtual Users (VUs)",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 6},
+      "id": 3,
+      "options": {},
+      "targets": [
+        {
+          "expr": "k6_iteration_duration_p95{job_name=\"$job_name\"}",
+          "interval": "",
+          "legendFormat": "p95",
+          "refId": "A"
+        },
+        {
+          "expr": "k6_iteration_duration_p99{job_name=\"$job_name\"}",
+          "interval": "",
+          "legendFormat": "p99",
+          "refId": "B"
+        }
+      ],
+      "title": "Iteration Duration (ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 6},
+      "id": 4,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(rate(k6_http_req_failed{job_name=\"$job_name\"}[1m])) / sum(rate(k6_http_reqs{job_name=\"$job_name\"}[1m]))",
+          "interval": "",
+          "legendFormat": "Error Rate",
+          "refId": "A"
+        }
+      ],
+      "title": "Error Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 14},
+      "id": 5,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(k6_iterations{job_name=\"$job_name\"})",
+          "interval": "",
+          "legendFormat": "Iterations",
+          "refId": "A"
+        }
+      ],
+      "title": "Test Iterations",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 14},
+      "id": 6,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(k6_data_received{job_name=\"$job_name\"})",
+          "interval": "",
+          "legendFormat": "Data Received",
+          "refId": "A"
+        }
+      ],
+      "title": "Data Received (bytes)",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 20},
+      "id": 7,
+      "options": {},
+      "targets": [
+        {
+          "expr": "k6_vus{job_name=\"$job_name\"}",
+          "interval": "",
+          "legendFormat": "{{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Virtual Users by Instance",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 20},
+      "id": 8,
+      "options": {},
+      "targets": [
+        {
+          "expr": "k6_http_req_duration_p95{job_name=\"$job_name\"}",
+          "interval": "",
+          "legendFormat": "p95",
+          "refId": "A"
+        },
+        {
+          "expr": "k6_http_req_duration_p99{job_name=\"$job_name\"}",
+          "interval": "",
+          "legendFormat": "p99",
+          "refId": "B"
+        }
+      ],
+      "title": "HTTP Request Duration (ms)",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": ["k6", "load test"],
+  "templating": {
+    "list": [
+      {
+        "name": "job_name",
+        "type": "query",
+        "datasource": "Prometheus",
+        "refresh": 1,
+        "query": "label_values(k6_vus, job_name)",
+        "hide": 0,
+        "label": "Job Name",
+        "multi": false,
+        "includeAll": false,
+        "options": [],
+        "current": {},
+        "sort": 1
+      }
+    ]
+  },
+  "time": {"from": "now-15m", "to": "now"},
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "k6 Load Test Overview",
+  "uid": null,
+  "version": 1
+}
+

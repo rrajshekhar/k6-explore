@@ -1,0 +1,917 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Digital Messaging Center",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://api.mesh.dkp2.tst.aws-digital.rccl.com/notifications/digital-messaging-center/v1",
+      "description": "Test server"
+    },
+    {
+      "url": "https://api.mesh.dkp2.stg.aws-digital.rccl.com/notifications/digital-messaging-center/v1",
+      "description": "Stage server"
+    },
+    {
+      "url": "https://api.mesh.dkp2.prd.aws-digital.rccl.com/notifications/digital-messaging-center/v1",
+      "description": "Production server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Subscriber Notifications",
+      "description": "API Endpoints for retrieving and management of subscriber notifications feed."
+    },
+    {
+      "name": "Actuator",
+      "description": "Monitor and interact",
+      "externalDocs": {
+        "description": "Spring Boot Actuator Web API Documentation",
+        "url": "https://docs.spring.io/spring-boot/docs/current/actuator-api/html/"
+      }
+    }
+  ],
+  "paths": {
+    "/heartbeat/": {
+      "get": {
+        "tags": [
+          "heart-beat-controller"
+        ],
+        "operationId": "getHeartbeat",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "heart-beat-controller"
+        ],
+        "operationId": "getHeartbeat_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/heartbeat": {
+      "get": {
+        "tags": [
+          "heart-beat-controller"
+        ],
+        "operationId": "getHeartbeat_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "heart-beat-controller"
+        ],
+        "operationId": "getHeartbeat_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/messages/action": {
+      "put": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Endpoint to update notification read status",
+        "description": "Update notification read status by subscriber id and notification id",
+        "operationId": "put-notification",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Brand",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationActionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Notification status update executed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Notification not found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while updating notification status",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notifications": {
+      "put": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Endpoint to update notification read status",
+        "description": "Update notification read status by subscriber id and notification id",
+        "operationId": "put-notification_1",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Brand",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationActionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Notification status update executed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Notification not found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while updating notification status",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyListNotificationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notifications/subscriber/{subscriberId}/stats": {
+      "get": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Get the unseen notifications count by subscriber Id",
+        "description": "Endpoint for getting the unseen notifications count from Novu by subscriber Id.",
+        "operationId": "get-unseen-notifications-count",
+        "parameters": [
+          {
+            "name": "subscriberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Unseen Notifications count retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationsCountResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while getting the unseen notifications count",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsCountResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/messages/subscriber/{subscriberId}/stats": {
+      "get": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Get the unseen notifications count by subscriber Id",
+        "description": "Endpoint for getting the unseen notifications count from Novu by subscriber Id.",
+        "operationId": "get-unseen-notifications-count_1",
+        "parameters": [
+          {
+            "name": "subscriberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Unseen Notifications count retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationsCountResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while getting the unseen notifications count",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsCountResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notifications/subscriber/{subscriberId}": {
+      "get": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Endpoint for performing notifications search",
+        "description": "Fetches notifications from Novu by subscriberId.",
+        "operationId": "get-notifications",
+        "parameters": [
+          {
+            "name": "subscriberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Brand",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Notifications search executed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error with the subscriber Id",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while getting subscriber notifications",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The request cannot be processed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/messages/subscriber/{subscriberId}": {
+      "get": {
+        "tags": [
+          "Subscriber Notifications"
+        ],
+        "summary": "Endpoint for performing notifications search",
+        "description": "Fetches notifications from Novu by subscriberId.",
+        "operationId": "get-notifications_1",
+        "parameters": [
+          {
+            "name": "subscriberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Brand",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Notifications search executed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error with the subscriber Id",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error while getting subscriber notifications",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The request cannot be processed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseBodyNotificationsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/actuator": {
+      "get": {
+        "tags": [
+          "Actuator"
+        ],
+        "summary": "Actuator root web endpoint",
+        "operationId": "links",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/vnd.spring-boot.actuator.v3+json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              },
+              "application/vnd.spring-boot.actuator.v2+json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/actuator/health": {
+      "get": {
+        "tags": [
+          "Actuator"
+        ],
+        "summary": "Actuator web endpoint 'health'",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/vnd.spring-boot.actuator.v3+json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/vnd.spring-boot.actuator.v2+json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NotificationAction": {
+        "type": "object",
+        "properties": {
+          "subscriber": {
+            "type": "string",
+            "minLength": 1
+          },
+          "messageId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "pattern": "(viewed|unviewed|read|unread|primaryComplete|primaryPending|primaryDefault|secondaryComplete|secondaryPending|secondaryDefault)"
+          },
+          "subscriberIdRef": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "NotificationActionRequest": {
+        "type": "object",
+        "description": "Messaging Center notification action request body",
+        "properties": {
+          "messageActionList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationAction"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "messageActionList"
+        ]
+      },
+      "Action": {
+        "type": "object",
+        "properties": {
+          "actionId": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Delivery": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/Action"
+          },
+          "message": {
+            "$ref": "#/components/schemas/Message"
+          }
+        }
+      },
+      "Message": {
+        "type": "object",
+        "properties": {
+          "heading": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      },
+      "MessageCenter": {
+        "type": "object",
+        "properties": {
+          "expirationInDate": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string"
+          },
+          "imageUrl": {
+            "type": "string"
+          },
+          "messageType": {
+            "type": "string"
+          },
+          "primaryCallToAction": {
+            "type": "string"
+          },
+          "secondaryCallToAction": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          }
+        }
+      },
+      "NotificationResponse": {
+        "type": "object",
+        "description": "Messaging Center notification response",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isViewed": {
+            "type": "boolean"
+          },
+          "isSeen": {
+            "type": "boolean"
+          },
+          "isRead": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delivery": {
+            "$ref": "#/components/schemas/Delivery"
+          },
+          "messageCenter": {
+            "$ref": "#/components/schemas/MessageCenter"
+          }
+        }
+      },
+      "MiddlewareError": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "moreInfo": {
+            "type": "string"
+          },
+          "userMessage": {
+            "type": "string"
+          },
+          "validationErrors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ResponseBodyListNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MiddlewareError"
+          },
+          "payload": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationResponse"
+            }
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "type": "object",
+        "properties": {
+          "element": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "invalidValue": {
+            "type": "string"
+          }
+        }
+      },
+      "Warning": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "moreInfo": {
+            "type": "string"
+          },
+          "warningCode": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "NotificationsCountResponse": {
+        "type": "object",
+        "description": "Response body for unseen notification count",
+        "properties": {
+          "unSeenCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ResponseBodyNotificationsCountResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MiddlewareError"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/NotificationsCountResponse"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            }
+          }
+        }
+      },
+      "NotificationsResponse": {
+        "type": "object",
+        "description": "Response body for Search notification endpoints",
+        "properties": {
+          "notifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationResponse"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalUnseen": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ResponseBodyNotificationsResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MiddlewareError"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/NotificationsResponse"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            }
+          }
+        }
+      },
+      "Link": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "templated": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AppKey": {
+        "type": "apiKey",
+        "description": "The API key for accessing Digital service",
+        "name": "AppKey",
+        "in": "header"
+      }
+    }
+  }
+}

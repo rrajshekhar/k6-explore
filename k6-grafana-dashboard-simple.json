@@ -1,0 +1,162 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "iteration": 166,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 0},
+      "id": 1,
+      "options": {"reduceOptions": {"calcs": ["mean"], "fields": "", "values": false}},
+      "targets": [
+        {
+          "expr": "sum(rate(k6_http_reqs[1m]))",
+          "interval": "",
+          "legendFormat": "Requests/sec",
+          "refId": "A"
+        }
+      ],
+      "title": "Requests per Second",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 0},
+      "id": 2,
+      "options": {"reduceOptions": {"calcs": ["max"], "fields": "", "values": false}},
+      "targets": [
+        {
+          "expr": "max(k6_vus)",
+          "interval": "",
+          "legendFormat": "VUs",
+          "refId": "A"
+        }
+      ],
+      "title": "Virtual Users (VUs)",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 6},
+      "id": 3,
+      "options": {},
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(k6_http_req_duration_bucket[1m])) by (le))",
+          "interval": "",
+          "legendFormat": "p95",
+          "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum(rate(k6_http_req_duration_bucket[1m])) by (le))",
+          "interval": "",
+          "legendFormat": "p99",
+          "refId": "B"
+        }
+      ],
+      "title": "HTTP Request Duration (ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 6},
+      "id": 4,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(rate(k6_http_req_failed[1m])) / sum(rate(k6_http_reqs[1m]))",
+          "interval": "",
+          "legendFormat": "Error Rate",
+          "refId": "A"
+        }
+      ],
+      "title": "Error Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 0, "y": 14},
+      "id": 5,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(k6_iterations)",
+          "interval": "",
+          "legendFormat": "Iterations",
+          "refId": "A"
+        }
+      ],
+      "title": "Test Iterations",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 6, "w": 12, "x": 12, "y": 14},
+      "id": 6,
+      "options": {},
+      "targets": [
+        {
+          "expr": "sum(k6_data_received)",
+          "interval": "",
+          "legendFormat": "Data Received",
+          "refId": "A"
+        }
+      ],
+      "title": "Data Received (bytes)",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {}, "overrides": []},
+      "gridPos": {"h": 8, "w": 24, "x": 0, "y": 20},
+      "id": 7,
+      "options": {},
+      "targets": [
+        {
+          "expr": "k6_vus",
+          "interval": "",
+          "legendFormat": "{{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Virtual Users by Instance",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": ["k6", "load test"],
+  "templating": {
+    "list": []
+  },
+  "time": {"from": "now-15m", "to": "now"},
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "k6 Load Test Overview (All Metrics)",
+  "uid": null,
+  "version": 1
+}
+
